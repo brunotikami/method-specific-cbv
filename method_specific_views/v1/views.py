@@ -1,0 +1,3 @@
+
+from method_specific_views.v1.create_resource import CreateResourceView
+from method_specific_views.v1.update_or_delete_resource import UpdateOrDeleteResourceView
