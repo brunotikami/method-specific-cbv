@@ -25,7 +25,7 @@ help: ## help: Show this help message.
 	@echo "targets:"
 	@grep -Eh '^.+:(\w+)?\ ##\ .+' ${MAKEFILE_LIST} | cut -d ' ' -f '3-' | column -t -s ':'
 
-build-package: ## build-package: Generate a new version based on .bumpversion.cfg settings, upload the egg to the internal Pypi and push the newly created tag
+build-package: ## build-package: Generate a new version based on .bumpversion.cfg settings and push the newly created tag
 	${PYENV_HOME}/bin/bumpversion ${VERSION_TYPE};
 	echo "Created version ${CURRENT_VERSION}"
 	#python setup.py sdist upload -r pypi.prod 
