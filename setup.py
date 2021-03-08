@@ -51,12 +51,6 @@ class PublishCommand(Command):
         except FileNotFoundError:
             pass
 
-        self.status('Building Source and Wheel (universal) distribution…')
-        os.system('{0} setup.py sdist'.format(sys.executable))
-
-        self.status('Uploading the package to pypi.mercadobitcoin.net via Twine...')
-        os.system('twine upload -r mercadobitcoin dist/*')
-
         sys.exit()
 
 # Where the magic happens:
